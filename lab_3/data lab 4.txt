@@ -1,0 +1,195 @@
+data lab 4
+
+    Relative Factor of 2: The array size doubles when resized.
+
+    Relative Factor of 1.5: The array size increases by 50% when resized.
+
+    Fixed Size of 1024 (210210): The array size increases by 1024 elements when resized.
+
+    Fixed Size of 8192 (213213): The array size increases by 8192 elements when resized.
+
+    Fixed Size of 32768 (215215): The array size increases by 32768 elements when resized.
+
+    Relative Factor of 2:
+
+        Pros: Efficient for large lists, as the number of resizes grows logarithmically with list size.
+
+        Cons: Can lead to significant memory waste for smaller lists due to large capacity jumps.
+
+    Relative Factor of 1.5:
+
+        Pros: Balances memory usage and resizing frequency better than the factor of 2.
+
+        Cons: Slightly more resizes compared to the factor of 2, but less memory waste.
+
+    Fixed Size of 1024 (210210):
+
+        Pros: Predictable memory usage, suitable for small to medium lists.
+
+        Cons: High number of resizes for large lists, leading to increased time and append copies.
+
+    Fixed Size of 8192 (213213):
+
+        Pros: Fewer resizes than 1024, better for medium-sized lists.
+
+        Cons: Still inefficient for very large lists.
+
+    Fixed Size of 32768 (215215):
+
+        Pros: Minimal resizes, efficient for very large lists.
+
+        Cons: High memory waste for small lists.
+
+
+    Small Lists: Fixed-size strategies (1024, 8192, 32768) perform well with minimal resizes and memory waste.
+
+    Large Lists: Relative growth strategies (factor of 2 or 1.5) are more efficient, as they reduce the number of resizes and append copies.
+
+* 2
+Experimenting with list size 10000
+Average time: 0.0104 seconds
+Average capacity: 16384.0
+Average resizes: 14.0
+Average append copies: 16383.0
+Average remove copies: 0.0
+
+Experimenting with list size 100000
+Average time: 0.1146 seconds
+Average capacity: 131072.0
+Average resizes: 17.0
+Average append copies: 131071.0
+Average remove copies: 0.0
+
+Experimenting with list size 1000000
+Average time: 1.3385 seconds
+Average capacity: 1048576.0
+Average resizes: 20.0
+Average append copies: 1048575.0
+Average remove copies: 0.0
+
+Experimenting with list size 10000000
+Average time: 20.4115 seconds
+Average capacity: 16777216.0
+Average resizes: 24.0
+Average append copies: 16777215.0
+Average remove copies: 0.0
+
+* 1.5
+
+Experimenting with list size 10000
+Average time: 0.0156 seconds
+Average capacity: 12138.0
+Average resizes: 23.0
+Average append copies: 24284.0
+Average remove copies: 0.0
+
+Experimenting with list size 100000
+Average time: 0.1615 seconds
+Average capacity: 138255.0
+Average resizes: 29.0
+Average append copies: 276521.0
+Average remove copies: 0.0
+
+Experimenting with list size 1000000
+Average time: 1.7969 seconds
+Average capacity: 1049869.0
+Average resizes: 34.0
+Average append copies: 2099753.0
+Average remove copies: 0.0
+
+Experimenting with list size 10000000
+Average time: 25.3906 seconds
+Average capacity: 11958657.0
+Average resizes: 40.0
+Average append copies: 23917332.0
+Average remove copies: 0.0
+
+* 2^10
+
+Experimenting with list size 10000
+Average time: 0.0156 seconds
+Average capacity: 14342.0
+Average resizes: 11.0
+Average append copies: 14363.0
+Average remove copies: 0.0
+
+Experimenting with list size 100000
+Average time: 0.1146 seconds
+Average capacity: 114694.0
+Average resizes: 14.0
+Average append copies: 114733.0
+Average remove copies: 0.0
+
+Experimenting with list size 1000000
+Average time: 2.1354 seconds
+Average capacity: 1835014.0
+Average resizes: 18.0
+Average append copies: 1835077.0
+Average remove copies: 0.0
+
+Experimenting with list size 10000000
+Average time: 19.4479 seconds
+Average capacity: 14680070.0
+Average resizes: 21.0
+Average append copies: 14680151.0
+Average remove copies: 0.0
+
+* 2^13
+
+Experimenting with list size 10000
+Average time: 0.0104 seconds
+Average capacity: 12283.0
+Average resizes: 11.0
+Average append copies: 12235.0
+Average remove copies: 0.0
+
+Experimenting with list size 100000
+Average time: 0.1510 seconds
+Average capacity: 196603.0
+Average resizes: 15.0
+Average append copies: 196535.0
+Average remove copies: 0.0
+
+Experimenting with list size 1000000
+Average time: 1.9167 seconds
+Average capacity: 1572859.0
+Average resizes: 18.0
+Average append copies: 1572776.0
+Average remove copies: 0.0
+
+Experimenting with list size 10000000
+Average time: 17.9531 seconds
+Average capacity: 12582907.0
+Average resizes: 21.0
+Average append copies: 12582809.0
+Average remove copies: 0.0
+
+* 2^15
+
+Experimenting with list size 10000
+Average time: 0.0104 seconds
+Average capacity: 16389.0
+Average resizes: 12.0
+Average append copies: 16432.0
+Average remove copies: 0.0
+
+Experimenting with list size 100000
+Average time: 0.1250 seconds
+Average capacity: 131077.0
+Average resizes: 15.0
+Average append copies: 131135.0
+Average remove copies: 0.0
+
+Experimenting with list size 1000000
+Average time: 1.5677 seconds
+Average capacity: 1048581.0
+Average resizes: 18.0
+Average append copies: 1048654.0
+Average remove copies: 0.0
+
+Experimenting with list size 10000000
+Average time: 20.6198 seconds
+Average capacity: 16777221.0
+Average resizes: 22.0
+Average append copies: 16777314.0
+Average remove copies: 0.0

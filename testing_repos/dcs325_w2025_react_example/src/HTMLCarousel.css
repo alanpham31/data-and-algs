@@ -1,0 +1,19 @@
+.carousel-caption > * {
+  color: black;
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: auto;
+}
+
+.carousel .carousel-indicators button {
+  height: 10px;
+  background: black;
+  border-radius: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}

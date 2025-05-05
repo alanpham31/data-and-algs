@@ -1,0 +1,34 @@
+class Matrix:
+    __slots__ = ("_num_rows", "_num_cols", "_data")
+
+    def __init__(self, rows: int, cols: int, data: list[int], filename = None) -> None:
+        if filename:
+            self._load_from_file(filename)
+        else:
+            self._num_rows = rows
+            self._num_cols = cols
+            
+        self._data = []
+        for r in range(rows):
+            row_data = []
+            for c in range(cols):
+                index = (r * cols) + c
+                row_data.append(data[index])
+            self._data.append(row_data)
+    
+    def __str__(self) -> None:
+        print(f"|  {self._data}|\n|  |")
+    
+    def getNumRows(self) -> int:
+        return self._num_rows
+    
+    def getNumCols(self) -> int:
+        return self._num_cols
+    
+
+
+def main() -> None:
+    m = Matrix(2, 3, [4, 33, 2, 2, 3, 1])
+    Matrix.getNumRows(m)
+
+main()
